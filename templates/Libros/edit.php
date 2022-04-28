@@ -16,18 +16,25 @@
             <?= $this->Html->link(__('List Libros'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
+
     <div class="column-responsive column-80">
         <div class="libros form content">
-            <?= $this->Form->create($libro) ?>
+
+            <!-- Cambiar a formulario o input de imagen -->
+            <?= $this->Form->create($libro, ['type'=>'file']) ?>
             <fieldset>
                 <legend><?= __('Edit Libro') ?></legend>
                 <?php
                     echo $this->Form->control('nombre');
-                    echo $this->Form->control('imagen');
+                    echo $this->Form->control('imagen', ['type'=>'file', 'required'=>false]);
                 ?>
+
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>
+
+
+
         </div>
     </div>
 </div>
