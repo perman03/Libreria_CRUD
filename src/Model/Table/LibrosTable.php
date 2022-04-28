@@ -55,6 +55,10 @@ class LibrosTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
+            ->integer('id')
+            ->allowEmptyString('id', null, 'create'); 
+
+        $validator
             ->scalar('nombre')
             ->maxLength('nombre', 255)
             ->requirePresence('nombre', 'create')

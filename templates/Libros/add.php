@@ -14,7 +14,9 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="libros form content">
-            <?= $this->Form->create($libro) ?>
+
+            <!-- Aqui se encontraba el error -->
+            <?= $this->Form->create($libro, ['type'=>'file']) ?>
 
             <fieldset>
                 <legend><?= __('Add Libro') ?></legend>
@@ -25,8 +27,8 @@
             </fieldset>
 
             <?= $this->Form->button(__('Submit')) ?>
-
             <?= $this->Form->end() ?>
+
         </div>
     </div>
 </div>
