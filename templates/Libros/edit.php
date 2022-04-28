@@ -25,12 +25,17 @@
             <fieldset>
                 <legend><?= __('Edit Libro') ?></legend>
                 <?php
-                    echo $this->Form->control('nombre');
+                    echo $this->Form->control('nombre');                
                     echo $this->Form->control('imagen', ['type'=>'file', 'required'=>false]);
                 ?>
 
             </fieldset>
+                <div>
+                <td><?=  $this->Html->image( 'Libros/'.$libro->imagen, array('width' => 100) ) ?> </td>
+
+                </div>
             <?= $this->Form->button(__('Submit')) ?>
+            
             <?= $this->Form->end() ?>
 
 

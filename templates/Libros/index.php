@@ -24,7 +24,8 @@
                 <tr>
                     <td><?= $this->Number->format($libro->id) ?></td>
                     <td><?= h($libro->nombre) ?></td>
-                    <td><?= h($libro->imagen) ?></td>
+                    <!-- Mostrar imagen en la app -->
+                    <td><?=  $this->Html->image( 'Libros/'.$libro->imagen, array('width' => 100) ) ?> </td>
                     <td><?= h($libro->created) ?></td>
                     <td><?= h($libro->modified) ?></td>
                     <td class="actions">
@@ -34,6 +35,7 @@
                     </td>
                 </tr>
                 <?php endforeach; ?>
+
             </tbody>
         </table>
     </div>

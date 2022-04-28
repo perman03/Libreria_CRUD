@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Imagen') ?></th>
-                    <td><?= h($libro->imagen) ?></td>
+                    <td><?=  $this->Html->image( 'Libros/'.$libro->imagen, array('width' => 100) ) ?> </td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
